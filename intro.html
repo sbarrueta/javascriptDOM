@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <input  type="button" value="Saludar" onclick="miFuncion()">
+    <p id="saludo">Hola</p>
+    <div> Mi auto es un .....
+            <p id="segundoParrafo"></p>
+    </div>
+    <div> Mi edad es 
+            <p id="tercerParrafo"></p>
+    </div>
+ 	<script>
+        function Alumno(datoNombre, edad, curso)
+            {
+                this.nombre = datoNombre;// primer parametro
+                this.edad   = edad;// segundo parametro
+                this.curso  = curso;// tercer parametro
+            }
+
+            function Automovil(datoNombre, color, anio)
+            {
+                this.nombre = datoNombre;
+                this.color  = color;
+                this.anio   = anio;
+            }
+
+        var instancia = new Alumno("Rocio","18","JavaScript");// se crea la instancia (en memoria)
+        var instanciaAuto = new Automovil("Caribe", "Verde", 2015);// Se crea la instancia del automovil
+
+        var segundaVariable =document.getElementById("segundoParrafo");
+      
+
+
+        var contenido =document.getElementById("saludo");
+        var tercerVariable =document.getElementById("tercerParrafo");
+
+        contenido.innerHTML=instancia.curso;
+
+        segundaVariable.innerHTML=instanciaAuto.nombre+ " color " + instanciaAuto.color +
+                                    " modelo " + instanciaAuto.anio;
+
+        tercerVariable.innerHTML = instancia.edad;
+        
+
+
+
+            console.log(typeof respuesta);
+
+            console.log("Se ejecuto");
+		
+	</script>
+</body>
+</html>

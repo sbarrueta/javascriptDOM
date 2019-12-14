@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        img {
+            width: 150px;
+            height: 150px;
+            padding-left: 5px;
+        }
+    </style>
+</head>
+<body id="cuerpo">
+    <div id="renglon"></div>
+    <script>
+        console.log("Crea funcion");
+        function Flor(rutaImagen, costo, existencia){
+            this.ruta = rutaImagen;
+        }
+        console.log("crea el arreglo");
+        // cargamos los objetos en arreglo
+        var productos =[new Flor("roja.jpg",50,""),
+                        new Flor("rosa.jpg",55,""),
+                        new Flor("durazno.jpg",15,""),
+                        new Flor("clavel.jpg",10,"")
+        ];
+        console.log("crear referencia");
+        var contenido = document.getElementById("renglon");
+        var cadena ="";// inicializo la cadena
+        console.log("Incializo");
+        
+        for (var i =0; i < productos.length; i++ ){
+            cadena = cadena + "<img src='"+productos[i].ruta+"'>";// concateno la nueva imagen
+            console.log(i);
+        }
+        console.log("Termino for");
+        contenido.innerHTML=cadena;
+
+
+    </script>
+
+</body>
+</html>
